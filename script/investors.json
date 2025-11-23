@@ -1,0 +1,1077 @@
+[
+    {
+      "id": "investor_01",
+      "name": "Daniel Mercer",
+      "role": "Private Investor",
+      "firm": "NorthBridge Capital",
+      "location": "San Francisco, California, USA",
+      "geo_focus": ["North America", "Europe (Selective)"],
+      "investment_thesis": "Invests in early-stage AI-driven enterprise software solving measurable operational inefficiencies. Prioritizes companies demonstrating early product-led growth and strong customer validation.",
+      "preferred_rounds": ["Pre-Seed", "Seed", "Series A"],
+      "preferred_round_role": "Lead",
+      "check_size_range": "$250k–$1.5M",
+      "check_size_numeric": {
+        "min_usd": 250000,
+        "max_usd": 1500000
+      },
+      "preferred_industries": [ 
+        "Applied AI",
+        "Enterprise SaaS",
+        "Cybersecurity",
+        "DevOps",
+        "Data Infrastructure",
+        "FinTech Compliance"
+      ],
+      "business_models": ["B2B", "SaaS", "PLG (Product-Led Growth)"],
+      "avoid_industries": ["B2C Consumer Apps", "Gaming", "Pure Research"],
+      "portfolio": [
+        {
+          "company": "Coderise.ai",
+          "industry": "Developer Tooling",
+          "stage_invested": "Seed"
+        },
+        {
+          "company": "ValidateX",
+          "industry": "FinTech Automation",
+          "stage_invested": "Pre-Seed"
+        },
+        {
+          "company": "SentriGuard",
+          "industry": "Cybersecurity",
+          "stage_invested": "Series A"
+        }
+      ],
+      "background": "Former senior engineering manager at Atlassian with a decade of experience in cloud infrastructure, DevOps, and enterprise developer tooling.",
+      "evaluation_criteria": [
+        "Technical founding team",
+        "Strong founder-market fit",
+        "Early customer traction",
+        "Fast iteration cycles",
+        "Potential for integrations and ecosystem expansion"
+      ],
+      "personality_type": "Analytical, detail-oriented, prefers demos over theory.",
+      "support_level": "Hands-on during first 6–12 months with GTM, hiring, and product roadmap.",
+      "contact_policy": "Accepts cold outreach if concise and metrics-driven.",
+      "active_status": "Active"
+    },
+  {
+    "id": "investor_02",
+    "name": "Sophia Müller",
+    "role": "Private Investor",
+    "firm": "Forge Capital",
+    "location": "Berlin, Germany",
+    "geo_focus": ["Europe", "North America"],
+    "investment_thesis": "Backs deep tech and B2B SaaS companies with strong IP defensibility and clear commercialization paths in the EU and US markets.",
+    "preferred_rounds": ["Seed", "Series A"],
+    "preferred_round_role": "Lead",
+    "check_size_range": "€500k–€4M",
+    "check_size_numeric": {
+      "min_usd": 550000,
+      "max_usd": 4400000
+    },
+    "preferred_industries": [
+      "DeepTech",
+      "Enterprise SaaS",
+      "AI Platforms",
+      "Developer Tools"
+    ],
+    "business_models": ["B2B", "SaaS", "Usage-Based Pricing"],
+    "avoid_industries": ["Pure Crypto", "Consumer Social", "AdTech"],
+    "portfolio": [
+      {
+        "company": "KernelGrid",
+        "industry": "Cloud Infrastructure",
+        "stage_invested": "Seed"
+      },
+      {
+        "company": "LogicLayer",
+        "industry": "Enterprise SaaS",
+        "stage_invested": "Series A"
+      },
+      {
+        "company": "Startup_Forge01",
+        "industry": "DeepTech",
+        "stage_invested": "Seed"
+      }
+    ],
+    "background": "Previously a principal at a pan-European growth equity firm and an early engineer at a Berlin-based SaaS unicorn.",
+    "evaluation_criteria": [
+      "Defensible technology moat",
+      "Large addressable market",
+      "Evidence of willingness to pay",
+      "Clear roadmap to Series B metrics"
+    ],
+    "personality_type": "Structured thinker, data-driven, appreciates concise communication.",
+    "support_level": "Active board member with regular strategy sessions and hiring support.",
+    "contact_policy": "Prefers warm introductions but reads concise cold emails with clear traction data.",
+    "active_status": "Active"
+  },
+  {
+    "id": "investor_03",
+    "name": "Liam O’Connor",
+    "role": "Public Investor",
+    "firm": "Independent",
+    "location": "Dublin, Ireland",
+    "geo_focus": ["Europe", "United Kingdom"],
+    "investment_thesis": "Invests in financial infrastructure and regulatory technology that simplify compliance for SMEs and fintechs in regulated markets.",
+    "preferred_rounds": ["Pre-Seed", "Seed"],
+    "preferred_round_role": "Follow",
+    "check_size_range": "$25k–$200k",
+    "check_size_numeric": {
+      "min_usd": 25000,
+      "max_usd": 200000
+    },
+    "preferred_industries": [
+      "FinTech",
+      "RegTech",
+      "Payments",
+      "Accounting Software"
+    ],
+    "business_models": ["B2B", "B2B2C", "APIs"],
+    "avoid_industries": ["Gaming", "Hardware", "Biotech"],
+    "portfolio": [
+      {
+        "company": "LedgerLane",
+        "industry": "Accounting Automation",
+        "stage_invested": "Pre-Seed"
+      },
+      {
+        "company": "ComplyBridge",
+        "industry": "Regulatory Tech",
+        "stage_invested": "Seed"
+      },
+      {
+        "company": "FinInfra_03",
+        "industry": "FinTech Infrastructure",
+        "stage_invested": "Seed"
+      }
+    ],
+    "background": "Former head of risk at a European digital bank and advisor to multiple Irish fintech accelerators.",
+    "evaluation_criteria": [
+      "Clear regulatory strategy",
+      "Domain expertise in the founding team",
+      "Early pilot customers",
+      "Path to recurring revenue"
+    ],
+    "personality_type": "Pragmatic, informal, prefers honest discussions over polished pitches.",
+    "support_level": "Hands-on for the first 6 months, especially with compliance and banking partnerships.",
+    "contact_policy": "Introductions via founders he has backed are strongly preferred.",
+    "active_status": "Active"
+  },
+  {
+    "id": "investor_04",
+    "name": "Elena Marino",
+    "role": "Private Investor",
+    "firm": "Azzurro Ventures",
+    "location": "Milan, Italy",
+    "geo_focus": ["Europe", "North America"],
+    "investment_thesis": "Supports mobility, robotics, and automation startups that modernize physical infrastructure and logistics networks.",
+    "preferred_rounds": ["Seed", "Series A"],
+    "preferred_round_role": "Lead or Co-Lead",
+    "check_size_range": "€400k–€2.5M",
+    "check_size_numeric": {
+      "min_usd": 440000,
+      "max_usd": 2750000
+    },
+    "preferred_industries": [
+      "Mobility",
+      "Robotics",
+      "Logistics Tech",
+      "Industrial Automation"
+    ],
+    "business_models": ["B2B", "Hardware + SaaS", "Platform"],
+    "avoid_industries": ["Pure Consumer Apps", "NFTs", "Gaming"],
+    "portfolio": [
+      {
+        "company": "RailFlux",
+        "industry": "Rail Logistics",
+        "stage_invested": "Seed"
+      },
+      {
+        "company": "AutonoDock",
+        "industry": "Port Automation",
+        "stage_invested": "Series A"
+      },
+      {
+        "company": "MobilityStack04",
+        "industry": "Mobility Infrastructure",
+        "stage_invested": "Seed"
+      }
+    ],
+    "background": "Mechanical engineer by training, with 8 years in a European industrial automation conglomerate before moving into venture.",
+    "evaluation_criteria": [
+      "Pilot projects with industrial customers",
+      "Robust unit economics at scale",
+      "Clear differentiation from legacy systems",
+      "Strong technical founding team"
+    ],
+    "personality_type": "Direct, detail-focused, enjoys visiting factories and warehouses more than boardrooms.",
+    "support_level": "Hands-on with enterprise sales strategy and intros into European industrial networks.",
+    "contact_policy": "Open to cold outreach that includes a short product video and clear customer use cases.",
+    "active_status": "Active"
+  },
+  {
+    "id": "investor_05",
+    "name": "Henrik Sörensen",
+    "role": "Public Investor",
+    "firm": "Nordic Growth Fund",
+    "location": "Stockholm, Sweden",
+    "geo_focus": ["Nordics", "Europe", "North America"],
+    "investment_thesis": "Invests in climate tech, clean manufacturing, and software that reduces emissions and resource waste in traditional industries.",
+    "preferred_rounds": ["Seed", "Series A"],
+    "preferred_round_role": "Lead",
+    "check_size_range": "€600k–€3M",
+    "check_size_numeric": {
+      "min_usd": 660000,
+      "max_usd": 3300000
+    },
+    "preferred_industries": [
+      "Climate Tech",
+      "Clean Manufacturing",
+      "Energy Efficiency",
+      "Carbon Accounting"
+    ],
+    "business_models": ["B2B", "SaaS", "Data Platform"],
+    "avoid_industries": ["Fossil Fuel Exploration", "Gambling", "AdTech"],
+    "portfolio": [
+      {
+        "company": "ClearForge",
+        "industry": "Green Manufacturing",
+        "stage_invested": "Seed"
+      },
+      {
+        "company": "CarbonSight",
+        "industry": "Carbon Accounting SaaS",
+        "stage_invested": "Series A"
+      },
+      {
+        "company": "EcoOps_05",
+        "industry": "Sustainability Analytics",
+        "stage_invested": "Seed"
+      }
+    ],
+    "background": "Industrial engineer with prior experience in sustainability consulting and a Nordic climate-focused accelerator.",
+    "evaluation_criteria": [
+      "Quantified emission reduction",
+      "Willingness to pay from large enterprises",
+      "Scalable business model",
+      "Alignment with regulatory trends"
+    ],
+    "personality_type": "Calm, methodical, prefers thoughtful founders over aggressive salesmanship.",
+    "support_level": "Regular check-ins, fundraising support, and help with corporate partnerships.",
+    "contact_policy": "Warm introductions preferred; responds to decks that highlight climate impact metrics.",
+    "active_status": "Active"
+  },
+  {
+    "id": "investor_06",
+    "name": "Chloé Bernard",
+    "role": "Public Investor",
+    "firm": "Independent",
+    "location": "Paris, France",
+    "geo_focus": ["France", "Europe"],
+    "investment_thesis": "Bets on consumer AI, digital wellness, and productivity products that build daily habits and strong user retention.",
+    "preferred_rounds": ["Pre-Seed", "Seed"],
+    "preferred_round_role": "Follow",
+    "check_size_range": "€20k–€150k",
+    "check_size_numeric": {
+      "min_usd": 22000,
+      "max_usd": 165000
+    },
+    "preferred_industries": ["HealthTech", "Consumer AI", "Productivity Apps"],
+    "business_models": ["B2C Subscription", "Freemium with Upsell"],
+    "avoid_industries": ["Gambling", "Crypto Speculation", "Defense"],
+    "portfolio": [
+      {
+        "company": "FocusFlow",
+        "industry": "Productivity",
+        "stage_invested": "Pre-Seed"
+      },
+      {
+        "company": "CalmMindly",
+        "industry": "Mental HealthTech",
+        "stage_invested": "Seed"
+      },
+      {
+        "company": "WellnessApp_06",
+        "industry": "Digital Wellness",
+        "stage_invested": "Pre-Seed"
+      }
+    ],
+    "background": "Former product lead at a Paris-based consumer app scale-up with a focus on growth and retention.",
+    "evaluation_criteria": [
+      "Engagement and retention metrics",
+      "Strong product intuition from founders",
+      "Organic user growth",
+      "Clear monetization hypothesis"
+    ],
+    "personality_type": "Empathetic, design-driven, cares deeply about user experience.",
+    "support_level": "Hands-on for product and UX feedback, light on operations.",
+    "contact_policy": "Open to well-crafted cold DMs on LinkedIn and Twitter with a demo link.",
+    "active_status": "Active"
+  },
+  {
+    "id": "investor_07",
+    "name": "Jan van Leeuwen",
+    "role": "Public Investor",
+    "firm": "Horizon BV",
+    "location": "Amsterdam, Netherlands",
+    "geo_focus": ["Benelux", "Europe", "North America"],
+    "investment_thesis": "Invests in SMB-focused SaaS, workflow automation, and no-code platforms that replace spreadsheets.",
+    "preferred_rounds": ["Seed", "Series A"],
+    "preferred_round_role": "Lead",
+    "check_size_range": "€300k–€2.5M",
+    "check_size_numeric": {
+      "min_usd": 330000,
+      "max_usd": 2750000
+    },
+    "preferred_industries": [
+      "SaaS",
+      "SMB Tools",
+      "Workflow Automation",
+      "No-Code"
+    ],
+    "business_models": ["B2B", "SaaS", "Seat-Based Pricing"],
+    "avoid_industries": ["Consumer Social", "Heavy Hardware"],
+    "portfolio": [
+      {
+        "company": "Sheetless",
+        "industry": "No-Code Automation",
+        "stage_invested": "Seed"
+      },
+      {
+        "company": "InboxOps",
+        "industry": "Customer Support SaaS",
+        "stage_invested": "Series A"
+      },
+      {
+        "company": "SMBTools_07",
+        "industry": "SMB Productivity",
+        "stage_invested": "Seed"
+      }
+    ],
+    "background": "Ex-founder of an exited SaaS company serving European SMEs, now a full-time investor.",
+    "evaluation_criteria": [
+      "Painkiller not vitamin",
+      "Low churn and high NRR",
+      "Efficient go-to-market motion",
+      "Referenceable early customers"
+    ],
+    "personality_type": "Practical, founder-friendly, focused on clear execution plans.",
+    "support_level": "Very involved for the first year, especially on GTM and pricing.",
+    "contact_policy": "Warm intros preferred; occasionally sources via SaaS founder communities.",
+    "active_status": "Active"
+  },
+  {
+    "id": "investor_08",
+    "name": "Public Investor",
+    "role": "Fund Director",
+    "firm": "Central Europe Seed Fund",
+    "location": "Prague, Czech Republic",
+    "geo_focus": ["Central Europe", "DACH", "Nordics"],
+    "investment_thesis": "Invests in AI infrastructure, cybersecurity, and enterprise automation tools emerging from Central and Eastern Europe.",
+    "preferred_rounds": ["Pre-Seed", "Seed"],
+    "preferred_round_role": "Lead",
+    "check_size_range": "€100k–€1.2M",
+    "check_size_numeric": {
+      "min_usd": 110000,
+      "max_usd": 1320000
+    },
+    "preferred_industries": [
+      "Cybersecurity",
+      "AI Infrastructure",
+      "DevTools",
+      "Enterprise Automation"
+    ],
+    "business_models": ["B2B", "SaaS", "APIs"],
+    "avoid_industries": ["Gaming", "DTC Ecommerce", "Traditional Retail"],
+    "portfolio": [
+      {
+        "company": "SentinelCore",
+        "industry": "Cybersecurity",
+        "stage_invested": "Seed"
+      },
+      {
+        "company": "PipeLineIQ",
+        "industry": "Developer Tools",
+        "stage_invested": "Pre-Seed"
+      },
+      {
+        "company": "InfraAI_08",
+        "industry": "AI Infrastructure",
+        "stage_invested": "Seed"
+      }
+    ],
+    "background": "Background in computer science and prior experience at a global cybersecurity vendor.",
+    "evaluation_criteria": [
+      "Strong technical founding team",
+      "Defensible tech advantage",
+      "Initial customer pilots",
+      "Clear expansion path beyond home market"
+    ],
+    "personality_type": "Technical, skeptical of buzzwords, likes live demos and code-level discussions.",
+    "support_level": "Offers deep technical and hiring support; less active on day-to-day operations.",
+    "contact_policy": "Reviews cold inbound from CEE founders, especially those with open-source traction.",
+    "active_status": "Active"
+  },
+  {
+    "id": "investor_09",
+    "name": "Ralf Becker",
+    "role": "Public Investor",
+    "firm": "Independent",
+    "location": "Zurich, Switzerland",
+    "geo_focus": ["DACH", "Europe"],
+    "investment_thesis": "Focuses on fintech, digital identity, and wealth management tools targeting high-net-worth individuals and SMEs.",
+    "preferred_rounds": ["Pre-Seed", "Seed"],
+    "preferred_round_role": "Follow",
+    "check_size_range": "CHF 50k–CHF 500k",
+    "check_size_numeric": {
+      "min_usd": 55000,
+      "max_usd": 550000
+    },
+    "preferred_industries": [
+      "FinTech",
+      "WealthTech",
+      "Identity Tech",
+      "Compliance"
+    ],
+    "business_models": ["B2B", "B2B2C", "Subscription"],
+    "avoid_industries": [
+      "Consumer Gaming",
+      "Short-Term Lending",
+      "Online Gambling"
+    ],
+    "portfolio": [
+      {
+        "company": "Vaultline",
+        "industry": "Wealth Management SaaS",
+        "stage_invested": "Seed"
+      },
+      {
+        "company": "IDAnchor",
+        "industry": "Digital Identity",
+        "stage_invested": "Pre-Seed"
+      },
+      {
+        "company": "FinID_09",
+        "industry": "Identity Infrastructure",
+        "stage_invested": "Seed"
+      }
+    ],
+    "background": "Former private banker and head of digital innovation at a Swiss financial institution.",
+    "evaluation_criteria": [
+      "Regulatory compliant from day one",
+      "Clear target segment definition",
+      "Sticky customer relationships",
+      "Partnership opportunities with banks"
+    ],
+    "personality_type": "Reserved, thorough, prefers in-person meetings for final decisions.",
+    "support_level": "Light but reliable; strong for introductions in banking and wealth management circles.",
+    "contact_policy": "Typically invests via referrals from other fintech investors and founders.",
+    "active_status": "Active"
+  },
+  {
+    "id": "investor_10",
+    "name": "Greta Johansen",
+    "role": "Private Investor",
+    "firm": "Oslo Innovation Fund",
+    "location": "Oslo, Norway",
+    "geo_focus": ["Nordics", "Europe", "North America"],
+    "investment_thesis": "Backs climate resilience, water tech, and green logistics startups addressing infrastructure challenges in developed markets.",
+    "preferred_rounds": ["Seed", "Series A"],
+    "preferred_round_role": "Lead or Co-Lead",
+    "check_size_range": "€500k–€3.5M",
+    "check_size_numeric": {
+      "min_usd": 550000,
+      "max_usd": 3850000
+    },
+    "preferred_industries": [
+      "Climate Tech",
+      "Water Tech",
+      "Green Logistics",
+      "Sustainable Infrastructure"
+    ],
+    "business_models": [
+      "B2B",
+      "Project-Based + SaaS",
+      "Public-Private Partnerships"
+    ],
+    "avoid_industries": [
+      "Fossil Fuels",
+      "Fast Fashion",
+      "High-Emission Industries Without Transition Plans"
+    ],
+    "portfolio": [
+      {
+        "company": "HarborWave",
+        "industry": "Port Electrification",
+        "stage_invested": "Seed"
+      },
+      {
+        "company": "AquaSense",
+        "industry": "Water Monitoring Tech",
+        "stage_invested": "Series A"
+      },
+      {
+        "company": "GreenRoute_10",
+        "industry": "Green Logistics",
+        "stage_invested": "Seed"
+      }
+    ],
+    "background": "Environmental engineer with a master’s degree in sustainable infrastructure and previous work at a Nordic development agency.",
+    "evaluation_criteria": [
+      "Measurable environmental impact",
+      "Bankable business model",
+      "Strong technical and policy understanding",
+      "Scalability across markets"
+    ],
+    "personality_type": "Mission-driven, collaborative, values humility and clarity.",
+    "support_level": "Provides active support on impact measurement, public funding, and international expansion.",
+    "contact_policy": "Accepts cold outreach that clearly articulates both climate impact and business case.",
+    "active_status": "Active"
+  },
+  {
+    "id": "investor_11",
+    "name": "Private Investor",
+    "role": "Partner",
+    "firm": "Silverline Ventures",
+    "location": "London, United Kingdom",
+    "geo_focus": ["UK", "Europe", "North America"],
+    "investment_thesis": "Invests in B2B AI SaaS and applied cybersecurity solutions replacing legacy enterprise software in regulated industries.",
+    "preferred_rounds": ["Seed", "Series A"],
+    "preferred_round_role": "Lead",
+    "check_size_range": "£600k–£4M",
+    "check_size_numeric": {
+      "min_usd": 750000,
+      "max_usd": 5000000
+    },
+    "preferred_industries": [
+      "SaaS",
+      "Applied AI",
+      "Cybersecurity",
+      "Data Governance"
+    ],
+    "business_models": ["B2B", "SaaS", "Enterprise Contracts"],
+    "avoid_industries": [
+      "Consumer Social",
+      "Unregulated Crypto",
+      "Hardware-First Businesses"
+    ],
+    "portfolio": [
+      {
+        "company": "ShieldWorks",
+        "industry": "Cybersecurity",
+        "stage_invested": "Seed"
+      },
+      {
+        "company": "VectorOps",
+        "industry": "AI Operations SaaS",
+        "stage_invested": "Series A"
+      },
+      {
+        "company": "RegSuite_11",
+        "industry": "RegTech",
+        "stage_invested": "Seed"
+      }
+    ],
+    "background": "Former consultant at a global strategy firm and later VP Product at a cybersecurity scale-up.",
+    "evaluation_criteria": [
+      "Critical workflow solved",
+      "Early mid-market or enterprise traction",
+      "Strong technical and commercial co-founder pairing",
+      "Line of sight to $10M+ ARR"
+    ],
+    "personality_type": "Analytical, expects well-prepared metrics and a clear roadmap.",
+    "support_level": "Highly engaged during go-to-market build-out and key hiring phases.",
+    "contact_policy": "Prefers warm introductions via founders, operators, or other investors.",
+    "active_status": "Active"
+  },
+  {
+    "id": "investor_12",
+    "name": "Private Investor",
+    "role": "Angel Investor",
+    "firm": "Independent",
+    "location": "Helsinki, Finland",
+    "geo_focus": ["Nordics", "Europe"],
+    "investment_thesis": "Invests in gaming tools, applied AI in consumer entertainment, and XR interfaces for immersive experiences.",
+    "preferred_rounds": ["Pre-Seed", "Seed"],
+    "preferred_round_role": "Follow",
+    "check_size_range": "€15k–€100k",
+    "check_size_numeric": {
+      "min_usd": 16500,
+      "max_usd": 110000
+    },
+    "preferred_industries": ["Gaming", "XR", "Creator Tools", "Consumer AI"],
+    "business_models": ["B2C", "B2B2C", "Platform + Marketplace"],
+    "avoid_industries": [
+      "Real-Money Gambling",
+      "Tobacco or Adult Content",
+      "Enterprise-Only Products"
+    ],
+    "portfolio": [
+      {
+        "company": "SpriteForge",
+        "industry": "Game Dev Tools",
+        "stage_invested": "Pre-Seed"
+      },
+      {
+        "company": "VersePort",
+        "industry": "Virtual Events Platform",
+        "stage_invested": "Seed"
+      },
+      {
+        "company": "GameTools_12",
+        "industry": "Gaming Tools",
+        "stage_invested": "Pre-Seed"
+      }
+    ],
+    "background": "Former game designer and studio lead at a well-known Nordic gaming company.",
+    "evaluation_criteria": [
+      "Compelling core loop",
+      "Strong community or creator angle",
+      "Clear differentiation from existing tools",
+      "Team with shipped titles or prototypes"
+    ],
+    "personality_type": "Creative, informal, enjoys brainstorming sessions and early product tests.",
+    "support_level": "Hands-on product feedback; limited involvement in operations and fundraising.",
+    "contact_policy": "Open to cold emails from teams with a playable build or prototype.",
+    "active_status": "Active"
+  },
+  {
+    "id": "investor_13",
+    "name": "Public Investor",
+    "role": "Venture Partner",
+    "firm": "Iberia Scale Partners",
+    "location": "Lisbon, Portugal",
+    "geo_focus": ["Iberia", "Europe"],
+    "investment_thesis": "Invests in e-commerce infrastructure, logistics automation, and marketplace tooling that enable cross-border trade.",
+    "preferred_rounds": ["Seed", "Series A"],
+    "preferred_round_role": "Co-Lead or Follow",
+    "check_size_range": "€200k–€1.5M",
+    "check_size_numeric": {
+      "min_usd": 220000,
+      "max_usd": 1650000
+    },
+    "preferred_industries": [
+      "E-Commerce Infrastructure",
+      "Logistics Tech",
+      "Marketplace Tools"
+    ],
+    "business_models": ["B2B", "SaaS", "Transaction Take-Rate"],
+    "avoid_industries": [
+      "Single-Brand DTC",
+      "Offline-Only Retail",
+      "Non-Tech-Enabled Services"
+    ],
+    "portfolio": [
+      {
+        "company": "ShipSpan",
+        "industry": "Cross-Border Logistics",
+        "stage_invested": "Seed"
+      },
+      {
+        "company": "CartRail",
+        "industry": "E-Commerce Ops SaaS",
+        "stage_invested": "Series A"
+      },
+      {
+        "company": "MarketInfra_13",
+        "industry": "Marketplace Infrastructure",
+        "stage_invested": "Seed"
+      }
+    ],
+    "background": "Previously COO of an Iberian logistics marketplace and mentor at multiple European accelerators.",
+    "evaluation_criteria": [
+      "Strong understanding of fulfillment and last-mile challenges",
+      "Evidence of merchant adoption",
+      "Resilient unit economics",
+      "Potential for geographic expansion"
+    ],
+    "personality_type": "Operationally minded, honest, prefers realism over hype.",
+    "support_level": "Deeply involved on processes, operations, and marketplace liquidity challenges.",
+    "contact_policy": "Takes introductions from logistics and commerce operators he trusts.",
+    "active_status": "Active"
+  },
+  {
+    "id": "investor_14",
+    "name": "Venture Capitalist",
+    "role": "Principal",
+    "firm": "BluePort Ventures",
+    "location": "New York, USA",
+    "geo_focus": ["North America", "Europe"],
+    "investment_thesis": "Invests in fintech infrastructure, compliance, and payments automation for mid-market and enterprise customers.",
+    "preferred_rounds": ["Seed", "Series A"],
+    "preferred_round_role": "Lead",
+    "check_size_range": "$700k–$4.5M",
+    "check_size_numeric": {
+      "min_usd": 700000,
+      "max_usd": 4500000
+    },
+    "preferred_industries": [
+      "FinTech",
+      "Payments",
+      "Compliance Automation",
+      "Treasury Management"
+    ],
+    "business_models": ["B2B", "API-First", "Usage-Based"],
+    "avoid_industries": [
+      "Retail Banking Apps",
+      "Non-Compliant Crypto",
+      "Consumer Lending"
+    ],
+    "portfolio": [
+      {
+        "company": "PayMatrix",
+        "industry": "B2B Payments",
+        "stage_invested": "Seed"
+      },
+      {
+        "company": "RegRelay",
+        "industry": "Compliance Automation",
+        "stage_invested": "Series A"
+      },
+      {
+        "company": "FinInfra_14",
+        "industry": "Financial Infrastructure",
+        "stage_invested": "Seed"
+      }
+    ],
+    "background": "Former product manager at Stripe focusing on compliance and treasury products.",
+    "evaluation_criteria": [
+      "Clear pain point in financial operations",
+      "Robust security and compliance posture",
+      "Strong technical leadership",
+      "Early enterprise design partners"
+    ],
+    "personality_type": "Fast-paced, straightforward, expects crisp metrics and roadmap clarity.",
+    "support_level": "Hands-on with GTM, enterprise sales, and US expansion for European teams.",
+    "contact_policy": "Responds to concise cold outreach that shows traction and clarity on ICP.",
+    "active_status": "Active"
+  },
+  {
+    "id": "investor_15",
+    "name": "Venture Capitalist",
+    "role": "Partner",
+    "firm": "MENA Future Ventures",
+    "location": "Dubai, United Arab Emirates",
+    "geo_focus": ["MENA", "Europe"],
+    "investment_thesis": "Invests in smart cities, GovTech, and public sector automation addressing large-scale infrastructure and citizen services.",
+    "preferred_rounds": ["Seed", "Series A"],
+    "preferred_round_role": "Lead or Co-Lead",
+    "check_size_range": "$300k–$2.5M",
+    "check_size_numeric": {
+      "min_usd": 300000,
+      "max_usd": 2500000
+    },
+    "preferred_industries": [
+      "GovTech",
+      "Urban Tech",
+      "Smart City Infrastructure"
+    ],
+    "business_models": ["B2G", "B2B", "Platform + Services"],
+    "avoid_industries": [
+      "Unregulated Consumer Apps",
+      "Speculative Crypto",
+      "Entertainment-Only Products"
+    ],
+    "portfolio": [
+      {
+        "company": "CivicLink",
+        "industry": "Citizen Services Platform",
+        "stage_invested": "Seed"
+      },
+      {
+        "company": "GridSense",
+        "industry": "Smart City Analytics",
+        "stage_invested": "Series A"
+      },
+      {
+        "company": "GovSuite_15",
+        "industry": "GovTech Platform",
+        "stage_invested": "Seed"
+      }
+    ],
+    "background": "Former policy advisor and digital transformation lead at a Gulf government entity.",
+    "evaluation_criteria": [
+      "Alignment with policy and regulatory priorities",
+      "Ability to navigate long sales cycles",
+      "Robust security and data privacy",
+      "Scalability to multiple municipalities or countries"
+    ],
+    "personality_type": "Diplomatic, patient, values founders who understand public sector dynamics.",
+    "support_level": "Deeply involved in public sector introductions and pilot design.",
+    "contact_policy": "Warm intros preferred; occasionally reviews GovTech-focused accelerator cohorts.",
+    "active_status": "Active"
+  },
+  {
+    "id": "investor_16",
+    "name": "Haruto Sato",
+    "role": "Public Investor",
+    "firm": "Independent",
+    "location": "Tokyo, Japan",
+    "geo_focus": ["Asia", "Europe"],
+    "investment_thesis": "Invests in robotics, industrial automation, and AI-powered manufacturing technologies improving quality and throughput.",
+    "preferred_rounds": ["Seed", "Series A"],
+    "preferred_round_role": "Follow",
+    "check_size_range": "¥7M–¥60M",
+    "check_size_numeric": {
+      "min_usd": 50000,
+      "max_usd": 400000
+    },
+    "preferred_industries": [
+      "Robotics",
+      "Industrial Automation",
+      "Manufacturing AI"
+    ],
+    "business_models": ["B2B", "Hardware + Software", "Licensing"],
+    "avoid_industries": [
+      "Consumer Apps",
+      "Media",
+      "Non-Technical Marketplaces"
+    ],
+    "portfolio": [
+      {
+        "company": "LineVision Robotics",
+        "industry": "Factory Automation",
+        "stage_invested": "Seed"
+      },
+      {
+        "company": "ForgeMind",
+        "industry": "Manufacturing AI",
+        "stage_invested": "Series A"
+      },
+      {
+        "company": "InduStack_16",
+        "industry": "Industrial Software",
+        "stage_invested": "Seed"
+      }
+    ],
+    "background": "Former engineering director at a Japanese industrial robot manufacturer.",
+    "evaluation_criteria": [
+      "Real-world deployment results",
+      "Integration with existing factory systems",
+      "ROI for customers",
+      "Strong technical depth"
+    ],
+    "personality_type": "Technical, measured, prefers on-site demos where possible.",
+    "support_level": "Hands-on with technical architecture and intros to Asian manufacturing partners.",
+    "contact_policy": "Typically invests alongside trusted seed funds; open to intros from European industrial VCs.",
+    "active_status": "Active"
+  },
+  {
+    "id": "investor_17",
+    "name": "Venture Capitalist",
+    "role": "Partner",
+    "firm": "Alps Frontier Ventures",
+    "location": "Geneva, Switzerland",
+    "geo_focus": ["Europe", "Canada"],
+    "investment_thesis": "Invests in AI models for scientific computing, research commercialization, and precision agriculture.",
+    "preferred_rounds": ["Seed", "Series A"],
+    "preferred_round_role": "Lead",
+    "check_size_range": "$750k–$5M",
+    "check_size_numeric": {
+      "min_usd": 750000,
+      "max_usd": 5000000
+    },
+    "preferred_industries": [
+      "AI Research Commercialization",
+      "AgriTech",
+      "Scientific Computing"
+    ],
+    "business_models": ["B2B", "SaaS", "Licensing"],
+    "avoid_industries": [
+      "Pure Consumer Apps",
+      "Advertising Tech",
+      "Non-Scalable Services"
+    ],
+    "portfolio": [
+      {
+        "company": "FieldSense AI",
+        "industry": "Precision Agriculture",
+        "stage_invested": "Seed"
+      },
+      {
+        "company": "LabTensor",
+        "industry": "Scientific Computing",
+        "stage_invested": "Series A"
+      },
+      {
+        "company": "AgriStack_17",
+        "industry": "AgriTech Platform",
+        "stage_invested": "Seed"
+      }
+    ],
+    "background": "Physics PhD turned VC, previously built a research software spin-out from a European university.",
+    "evaluation_criteria": [
+      "Strong link to validated scientific research",
+      "Clear path from prototype to product",
+      "Market willing to pay for accuracy and reliability",
+      "Balanced founding team (science + business)"
+    ],
+    "personality_type": "Curious, detail-oriented, enjoys whiteboard sessions with technical founders.",
+    "support_level": "Highly engaged on positioning, IP strategy, and early customer development.",
+    "contact_policy": "Prefers introductions from academics, incubators, or other deep tech investors.",
+    "active_status": "Active"
+  },
+  {
+    "id": "investor_18",
+    "name": "Public Investor",
+    "role": "Investment Lead",
+    "firm": "Baltic Innovation Fund",
+    "location": "Riga, Latvia",
+    "geo_focus": ["Northern Europe", "DACH", "Benelux"],
+    "investment_thesis": "Invests in SaaS workflow automation, logistics optimization, and industrial IoT solutions arising from the Baltics and surrounding regions.",
+    "preferred_rounds": ["Seed"],
+    "preferred_round_role": "Lead or Co-Lead",
+    "check_size_range": "€100k–€2M",
+    "check_size_numeric": {
+      "min_usd": 110000,
+      "max_usd": 2200000
+    },
+    "preferred_industries": ["IoT", "Automation", "SaaS", "Logistics Tech"],
+    "business_models": ["B2B", "SaaS", "Platform"],
+    "avoid_industries": [
+      "Pure Consumer Social",
+      "Non-Tech Services",
+      "Lifestyle Apps"
+    ],
+    "portfolio": [
+      {
+        "company": "FlowTrack",
+        "industry": "Logistics Optimization",
+        "stage_invested": "Seed"
+      },
+      {
+        "company": "SensorGrid",
+        "industry": "Industrial IoT",
+        "stage_invested": "Seed"
+      },
+      {
+        "company": "AutoOps_18",
+        "industry": "Workflow Automation",
+        "stage_invested": "Seed"
+      }
+    ],
+    "background": "Background in industrial engineering and prior operator experience at a Baltic SaaS scale-up.",
+    "evaluation_criteria": [
+      "Operational efficiency gains for customers",
+      "Evidence of bottom-up adoption",
+      "Low churn and sticky workflows",
+      "Potential for regional and EU-wide expansion"
+    ],
+    "personality_type": "Hands-on, pragmatic, prefers clear KPIs and dashboards.",
+    "support_level": "Active on GTM, especially channel partnerships and integrations.",
+    "contact_policy": "Open to cold outreach from Baltic and CEE founders with early traction.",
+    "active_status": "Active"
+  },
+  {
+    "id": "investor_19",
+    "name": "Leo Carter",
+    "role": "Venture Capitalist",
+    "firm": "Summit AI Fund",
+    "location": "Toronto, Canada",
+    "geo_focus": ["North America", "Europe"],
+    "investment_thesis": "Invests exclusively in AI-native products disrupting legacy enterprise workflows across sectors like finance, operations, and customer support.",
+    "preferred_rounds": ["Seed", "Series A"],
+    "preferred_round_role": "Lead",
+    "check_size_range": "$600k–$3.5M",
+    "check_size_numeric": {
+      "min_usd": 600000,
+      "max_usd": 3500000
+    },
+    "preferred_industries": [
+      "Applied AI",
+      "Enterprise Automation",
+      "AI Agents",
+      "Developer Tools"
+    ],
+    "business_models": ["B2B", "SaaS", "PLG (Product-Led Growth)"],
+    "avoid_industries": [
+      "Consumer Social",
+      "Non-AI-Enabled SaaS",
+      "Ad-Supported Models"
+    ],
+    "portfolio": [
+      {
+        "company": "FlowGrid",
+        "industry": "Workflow Automation",
+        "stage_invested": "Seed"
+      },
+      {
+        "company": "AgentSuite",
+        "industry": "AI Agents for Support",
+        "stage_invested": "Series A"
+      },
+      {
+        "company": "AIStack_19",
+        "industry": "AI Platform",
+        "stage_invested": "Seed"
+      }
+    ],
+    "background": "Former engineering leader at a North American AI scale-up focusing on enterprise automation.",
+    "evaluation_criteria": [
+      "Clear AI advantage over rule-based systems",
+      "Real usage, not just pilots",
+      "Strong MLOps and data infrastructure",
+      "Path to high-margin recurring revenue"
+    ],
+    "personality_type": "Analytical, direct, expects live product demos and user stories.",
+    "support_level": "Very active on product strategy and AI roadmap for the first 12 months.",
+    "contact_policy": "Open to cold outreach with a working product and initial metrics.",
+    "active_status": "Active"
+  },
+  {
+    "id": "investor_20",
+    "name": "Camila Duarte",
+    "role": "Venture Capitalist",
+    "firm": "LatAm Tech Fund",
+    "location": "São Paulo, Brazil",
+    "geo_focus": ["Latin America", "Europe"],
+    "investment_thesis": "Invests in logistics, mobility, and supply chain innovation in growing markets, with potential to expand into Europe.",
+    "preferred_rounds": ["Seed", "Series A"],
+    "preferred_round_role": "Co-Lead or Follow",
+    "check_size_range": "R$1M–R$8M",
+    "check_size_numeric": {
+      "min_usd": 200000,
+      "max_usd": 1500000
+    },
+    "preferred_industries": [
+      "Mobility",
+      "Logistics Tech",
+      "Supply Chain Software"
+    ],
+    "business_models": ["B2B", "Marketplace", "SaaS"],
+    "avoid_industries": [
+      "Non-Tech Logistics",
+      "Single-City-Only Models",
+      "Pure Consumer Ride-Hailing"
+    ],
+    "portfolio": [
+      {
+        "company": "CargoLink",
+        "industry": "Freight Marketplace",
+        "stage_invested": "Seed"
+      },
+      {
+        "company": "RouteWise",
+        "industry": "Route Optimization SaaS",
+        "stage_invested": "Series A"
+      },
+      {
+        "company": "Mobility_20",
+        "industry": "Fleet Management",
+        "stage_invested": "Seed"
+      }
+    ],
+    "background": "Previously led operations at a Brazilian logistics scale-up and advises multiple mobility startups.",
+    "evaluation_criteria": [
+      "Demonstrated ability to operate in complex logistics environments",
+      "Unit economics that improve with scale",
+      "Potential to expand from LatAm into Europe",
+      "Resilient founding team with on-the-ground experience"
+    ],
+    "personality_type": "Operator-minded, energetic, appreciates founders who understand field realities.",
+    "support_level": "Deeply involved in operations and local partnerships; moderate involvement in fundraising.",
+    "contact_policy": "Usually invests via accelerator programs and referrals, but reads concise cold decks from LatAm founders.",
+    "active_status": "Active"
+  }
+]

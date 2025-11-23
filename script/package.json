@@ -1,7 +1,7 @@
 {
-  "name": "business-turku-company-data",
+  "name": "business-turku-data-pipeline",
   "version": "1.0.0",
-  "description": "Fetch PRH company data, vectorize with Voyage AI, and store in Supabase",
+  "description": "Fetch company and investor data, vectorize with Voyage AI, and store in Supabase",
   "main": "index.js",
   "type": "module",
   "scripts": {
