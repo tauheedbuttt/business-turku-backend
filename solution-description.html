@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Turku - AI-Powered Funding & Investment Matching Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        header p {
+            font-size: 1.3em;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 50px 40px;
+        }
+        
+        section {
+            margin-bottom: 50px;
+        }
+        
+        h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        h3 {
+            color: #764ba2;
+            font-size: 1.5em;
+            margin: 25px 0 15px 0;
+        }
+        
+        .overview {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .overview p {
+            font-size: 1.15em;
+            line-height: 1.8;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        
+        .feature-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(102, 126, 234, 0.3);
+            border-color: #667eea;
+        }
+        
+        .feature-card h4 {
+            color: #667eea;
+            font-size: 1.3em;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-card .icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            margin-right: 12px;
+            text-align: center;
+            line-height: 40px;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .tech-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.95em;
+            box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+        }
+        
+        .architecture-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 25px;
+        }
+        
+        .data-flow {
+            background: white;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+        
+        .data-flow h4 {
+            color: #764ba2;
+            margin-bottom: 10px;
+        }
+        
+        .data-flow ul {
+            margin-left: 20px;
+        }
+        
+        .data-flow li {
+            margin: 8px 0;
+            color: #555;
+        }
+        
+        .stakeholders {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .stakeholder-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1em;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+        
+        .requirements-section {
+            margin-top: 25px;
+        }
+        
+        .requirement-category {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .requirement-category h4 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .requirement-item {
+            background: white;
+            padding: 12px 15px;
+            margin: 10px 0;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .requirement-item strong {
+            color: #764ba2;
+            display: inline-block;
+            min-width: 80px;
+        }
+        
+        .api-list {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .api-list h4 {
+            color: #90cdf4;
+            margin-bottom: 15px;
+        }
+        
+        .api-list a {
+            color: #90cdf4;
+            text-decoration: none;
+            display: block;
+            padding: 8px 0;
+            border-bottom: 1px solid #4a5568;
+        }
+        
+        .api-list a:hover {
+            color: #63b3ed;
+            text-decoration: underline;
+        }
+        
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        footer p {
+            margin: 5px 0;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .workflow-steps {
+            counter-reset: step-counter;
+            margin-top: 25px;
+        }
+        
+        .workflow-step {
+            counter-increment: step-counter;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            position: relative;
+            padding-left: 70px;
+        }
+        
+        .workflow-step::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .workflow-step h4 {
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            header p {
+                font-size: 1.1em;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Business Turku</h1>
+            <p>AI-Powered Funding & Investment Matching Platform</p>
+            <p style="font-size: 0.9em; margin-top: 15px; opacity: 0.9;">Connecting Finnish Companies with the Right Investors and Public Funding Instruments</p>
+        </header>
+        
+        <div class="content">
+            <!-- Overview Section -->
+            <section>
+                <h2>📋 Project Overview</h2>
+                <div class="overview">
+                    <p>
+                        Business Turku is an MVP-level AI tool designed to revolutionize how companies discover and connect with funding opportunities. 
+                        Based on a company name or business ID, the platform quickly generates a comprehensive company summary, identifies suitable 
+                        public funding instruments, and matches companies with relevant investors using advanced semantic search and AI-powered analysis.
+                    </p>
+                </div>
+                
+                <div class="highlight-box">
+                    <h3>🎯 Core Value Proposition</h3>
+                    <p>
+                        Eliminate the manual research burden of finding suitable investors and funding programs. Our platform leverages AI and vector 
+                        similarity search to instantly match companies with the most relevant funding opportunities and investors based on industry, 
+                        stage, location, and investment criteria.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Key Features Section -->
+            <section>
+                <h2>✨ Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h4><span class="icon">1</span> Company Search & Profiling</h4>
+                        <p>
+                            Users can search for companies by name or business ID. The system retrieves comprehensive company data from the 
+                            Finnish Patent and Registration Office (PRH) API, including size, industry classification, registration details, 
+                            and business information. Additional data points can be manually enriched by users.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4><span class="icon">2</span> Rich Company Data Display</h4>
+                        <p>
+                            Companies are presented with all available data from PRH API including business ID, name, industry codes, 
+                            registration date, and address. Users can add missing information such as funding round, valuation, 
+                            company hierarchy, and funding purpose to enhance matching accuracy.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4><span class="icon">3</span> AI-Powered Investor Matching</h4>
+                        <p>
+                            Using vector embeddings and semantic similarity search, the platform identifies and ranks investors 
+                            (VCs, public investors, and public funding programs) that best match the company's profile. Matches are 
+                            based on preferred industries, business models, investment rounds, geographic focus, check size, and investment thesis.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4><span class="icon">4</span> Intelligent Pitch Generation</h4>
+                        <p>
+                            For each matched investor, users can generate a customized pitch using OpenAI GPT models. The AI creates 
+                            compelling, investor-specific pitches that highlight the alignment between the company's profile and the 
+                            investor's preferences, portfolio, and investment criteria.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4><span class="icon">5</span> Interactive AI Pitch Refinement</h4>
+                        <p>
+                            Users can engage in a conversational interface with the LLM to iteratively refine and improve the pitch. 
+                            The AI can adjust tone, emphasize different aspects, incorporate feedback, and tailor the message to 
+                            specific investor preferences—all through natural language conversation.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4><span class="icon">6</span> Comprehensive Justifications</h4>
+                        <p>
+                            Each investor recommendation includes detailed justification explaining why they're a good match, including 
+                            industry alignment, stage fit, geographic preferences, previous portfolio investments, and investment thesis compatibility.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- User Workflow Section -->
+            <section>
+                <h2>🔄 User Workflow</h2>
+                <div class="workflow-steps">
+                    <div class="workflow-step">
+                        <h4>Company Search</h4>
+                        <p>User enters company name or business ID in the search interface</p>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <h4>Data Retrieval & Display</h4>
+                        <p>System fetches company data from PRH API and displays comprehensive profile including industry codes, registration info, and business details</p>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <h4>Data Enrichment (Optional)</h4>
+                        <p>User adds missing data points like funding round, valuation, hierarchy, and funding purpose to improve matching accuracy</p>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <h4>Investor Matching</h4>
+                        <p>System generates vector embeddings and performs similarity search to rank matching investors (VCs, public investors, public funds)</p>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <h4>Review Recommendations</h4>
+                        <p>User reviews ranked list of investors with detailed justifications for each match, including alignment on industry, stage, geography, and investment criteria</p>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <h4>Generate AI Pitch</h4>
+                        <p>User selects an investor and generates a customized pitch using OpenAI GPT models tailored to that specific investor's preferences and portfolio</p>
+                    </div>
+                    
+                    <div class="workflow-step">
+                        <h4>Refine Through Conversation</h4>
+                        <p>User iteratively improves the pitch through natural language conversation with the AI, adjusting tone, emphasis, and content based on feedback</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Architecture Section -->
+            <section>
+                <h2>🏗️ Technical Architecture</h2>
+                
+                <div class="architecture-section">
+                    <h3>System Components</h3>
+                    
+                    <div class="data-flow">
+                        <h4>Frontend Layer</h4>
+                        <ul>
+                            <li><strong>Framework:</strong> Next.js (React-based)</li>
+                            <li><strong>Deployment:</strong> Vercel (business-turku-frontend-final.vercel.app)</li>
+                            <li><strong>Features:</strong> Company search interface, investor matching display, pitch generation UI, conversational AI interface</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="data-flow">
+                        <h4>Backend Services</h4>
+                        <ul>
+                            <li><strong>Runtime:</strong> Node.js</li>
+                            <li><strong>Data Loading Scripts:</strong> Automated pipelines for company and investor data ingestion</li>
+                            <li><strong>APIs:</strong> RESTful endpoints for search, matching, and pitch generation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="data-flow">
+                        <h4>Database & Storage</h4>
+                        <ul>
+                            <li><strong>Platform:</strong> Supabase (PostgreSQL + pgvector extension)</li>
+                            <li><strong>Tables:</strong> company, company_embeddings, investor, investor_embeddings</li>
+                            <li><strong>Vector Search:</strong> HNSW indexes for fast similarity search with 1024-dimensional embeddings</li>
+                            <li><strong>Connection:</strong> postgresql://postgres:BusinessTurku@db.rvnljjfpwbvtcqsmedjg.supabase.co:5432/postgres</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="data-flow">
+                        <h4>AI & ML Services</h4>
+                        <ul>
+                            <li><strong>Embeddings:</strong> Voyage AI (voyage-2 and voyage-3.5 models, 1024 dimensions)</li>
+                            <li><strong>Pitch Generation:</strong> OpenAI GPT models (GPT-4/GPT-3.5-turbo)</li>
+                            <li><strong>Similarity Search:</strong> Cosine similarity via pgvector</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="data-flow">
+                        <h4>External Data Sources</h4>
+                        <ul>
+                            <li><strong>PRH API:</strong> Finnish Patent and Registration Office open data (avoindata.prh.fi)</li>
+                            <li><strong>Statistics Finland:</strong> Industry classification codes (toimiala_1_20250101)</li>
+                            <li><strong>DeepL API:</strong> Finnish-to-English translation for industry categories</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 30px;">Data Processing Pipeline</h3>
+                <div class="architecture-section">
+                    <div class="data-flow">
+                        <h4>Company Data Pipeline</h4>
+                        <ul>
+                            <li>Fetch companies from PRH API with pagination (up to 2000 companies)</li>
+                            <li>Filter for companies with industry classifications</li>
+                            <li>Translate Finnish industry category names to English using DeepL API</li>
+                            <li>Store company data in Supabase (bulk load without embeddings for performance)</li>
+                            <li>Optional: Generate vector embeddings for semantic search using Voyage AI</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="data-flow">
+                        <h4>Investor Data Pipeline</h4>
+                        <ul>
+                            <li>Load investor profiles from structured JSON file (20 investors)</li>
+                            <li>Store complete investor data in JSONB field</li>
+                            <li>Extract 7 key attributes for vectorization: preferred_industries, business_models, preferred_rounds, geo_focus, check_size_range, investment_thesis, avoid_industries</li>
+                            <li>Generate 1024-dimensional embeddings using Voyage AI (voyage-2 model)</li>
+                            <li>Store embeddings in investor_embeddings table with HNSW index</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="data-flow">
+                        <h4>Matching & Ranking Algorithm</h4>
+                        <ul>
+                            <li>Create company text from name, business ID, industry, description, and address</li>
+                            <li>Generate vector embedding for company query</li>
+                            <li>Perform cosine similarity search against investor embeddings</li>
+                            <li>Rank investors by similarity score</li>
+                            <li>Filter by user preferences (region, investor type, stage)</li>
+                            <li>Generate justifications highlighting matching attributes</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tech Stack Section -->
+            <section>
+                <h2>💻 Technology Stack</h2>
+                <div class="tech-stack">
+                    <div class="tech-badge">Next.js</div>
+                    <div class="tech-badge">React</div>
+                    <div class="tech-badge">Node.js</div>
+                    <div class="tech-badge">Supabase</div>
+                    <div class="tech-badge">PostgreSQL</div>
+                    <div class="tech-badge">pgvector</div>
+                    <div class="tech-badge">Voyage AI</div>
+                    <div class="tech-badge">OpenAI GPT</div>
+                    <div class="tech-badge">DeepL API</div>
+                    <div class="tech-badge">PRH Open Data API</div>
+                    <div class="tech-badge">Statistics Finland API</div>
+                    <div class="tech-badge">Vercel</div>
+                    <div class="tech-badge">Vector Similarity Search</div>
+                    <div class="tech-badge">HNSW Indexes</div>
+                </div>
+            </section>
+
+            <!-- Data Models Section -->
+            <section>
+                <h2>📊 Data Models</h2>
+                
+                <div class="architecture-section">
+                    <div class="data-flow">
+                        <h4>Company Data Attributes</h4>
+                        <ul>
+                            <li><strong>From PRH API:</strong> Business ID, Name, Industry Classification Code, Registration Date, Address, Business Status</li>
+                            <li><strong>User Enriched:</strong> Size (EU standards), Valuation, Current Investment Round, Company Hierarchy, Funding Size & Purpose</li>
+                            <li><strong>Computed:</strong> Industry Category Name (translated to English), Company Description</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="data-flow">
+                        <h4>Investor Data Attributes</h4>
+                        <ul>
+                            <li><strong>Identity:</strong> Name, Role, Firm, Location, Active Status</li>
+                            <li><strong>Investment Criteria:</strong> Preferred Industries, Business Models, Preferred Rounds, Round Role, Check Size Range</li>
+                            <li><strong>Geographic:</strong> Geo Focus (regions of investment)</li>
+                            <li><strong>Strategy:</strong> Investment Thesis, Avoid Industries</li>
+                            <li><strong>Track Record:</strong> Portfolio Companies, Previous Investments, Background</li>
+                            <li><strong>Engagement:</strong> Evaluation Criteria, Personality Type, Support Level, Contact Policy</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="data-flow">
+                        <h4>Matching Attributes (Used for Vector Embeddings)</h4>
+                        <ul>
+                            <li>preferred_industries - Industry sectors of interest</li>
+                            <li>business_models - Preferred business models (B2B, B2C, SaaS, etc.)</li>
+                            <li>preferred_rounds - Investment stages (Pre-Seed, Seed, Series A, etc.)</li>
+                            <li>geo_focus - Geographic regions for investment</li>
+                            <li>check_size_range - Ticket size range</li>
+                            <li>investment_thesis - Investment philosophy and focus areas</li>
+                            <li>avoid_industries - Industries explicitly excluded</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stakeholders Section -->
+            <section>
+                <h2>👥 Stakeholders</h2>
+                <div class="stakeholders">
+                    <div class="stakeholder-box">Business Turku Internal Team</div>
+                    <div class="stakeholder-box">Finnish Companies (Primary Users)</div>
+                    <div class="stakeholder-box">Private Investors & VCs</div>
+                    <div class="stakeholder-box">Public Funding Programs</div>
+                </div>
+            </section>
+
+            <!-- Requirements Section -->
+            <section>
+                <h2>📋 Functional Requirements</h2>
+                
+                <div class="requirements-section">
+                    <div class="requirement-category">
+                        <h4>Input and Data Collection Requirements</h4>
+                        <div class="requirement-item">
+                            <strong>FR-01:</strong> The system must allow users to manually input company data fields, including name or business ID, and retrieve information such as size, field of work, valuation, investment round, hierarchy, funding purpose, and overall company description.
+                        </div>
+                        <div class="requirement-item">
+                            <strong>FR-02:</strong> The system must retrieve or validate company data using the PRH API.
+                        </div>
+                        <div class="requirement-item">
+                            <strong>FR-03:</strong> The system must store investor attributes including name, region, major fields, and previous investments.
+                        </div>
+                        <div class="requirement-item">
+                            <strong>FR-04:</strong> The system must maintain structured metadata for public funding programs, including eligibility criteria and deadlines.
+                        </div>
+                    </div>
+                    
+                    <div class="requirement-category">
+                        <h4>Matching and Recommendation Requirements</h4>
+                        <div class="requirement-item">
+                            <strong>FR-05:</strong> The system must generate a ranked list of suitable public funding instruments based on company eligibility. The system must generate a ranked list of suitable investors based on previous investment patterns and region.
+                        </div>
+                        <div class="requirement-item">
+                            <strong>FR-06:</strong> The system must provide justification text for each recommendation, including matching attributes (e.g., industry match, funding stage match).
+                        </div>
+                        <div class="requirement-item">
+                            <strong>FR-07:</strong> The system must allow users to filter recommendation results by region, investor type (public/VC), and investment stage.
+                        </div>
+                    </div>
+                    
+                    <div class="requirement-category">
+                        <h4>User Interface Requirements</h4>
+                        <div class="requirement-item">
+                            <strong>FR-08:</strong> The system must provide a single input form for entering or validating company information.
+                        </div>
+                        <div class="requirement-item">
+                            <strong>FR-09:</strong> The UI must present ranked funding and investor recommendations in separate sections.
+                        </div>
+                        <div class="requirement-item">
+                            <strong>FR-10:</strong> Each recommendation must include a summary card with justification and source links.
+                        </div>
+                    </div>
+                    
+                    <div class="requirement-category">
+                        <h4>System Integration Requirements</h4>
+                        <div class="requirement-item">
+                            <strong>FR-11:</strong> The system architecture must support future integration with MS Dynamics CRM.
+                        </div>
+                        <div class="requirement-item">
+                            <strong>FR-12:</strong> The system must support REST-based API communication for saving and retrieving company profiles.
+                        </div>
+                    </div>
+                    
+                    <div class="requirement-category">
+                        <h4>Performance and Scalability Requirements</h4>
+                        <div class="requirement-item">
+                            <strong>FR-13:</strong> System response time must allow ranking and justification generation within 5 seconds per request (preferred) for MVP.
+                        </div>
+                    </div>
+                    
+                    <div class="requirement-category">
+                        <h4>Security and Access Requirements</h4>
+                        <div class="requirement-item">
+                            <strong>FR-14:</strong> Company and investor metadata must be stored securely and comply with GDPR.
+                        </div>
+                        <div class="requirement-item">
+                            <strong>FR-15:</strong> Audit logs must track final outputs and changes when editing company profiles.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- APIs and Resources Section -->
+            <section>
+                <h2>🔗 APIs and Resources</h2>
+                <div class="api-list">
+                    <h4>External APIs</h4>
+                    <a href="https://avoindata.prh.fi/en/ytj/swagger-ui" target="_blank">PRH Open Data API (Company Data)</a>
+                    <a href="https://data.stat.fi/api/classifications/v2/classifications/toimiala_1_20250101/classificationItems?content=data&meta=max&lang=fi&format=json" target="_blank">Statistics Finland (Industry Classifications)</a>
+                    <a href="https://api.deepl.com/v2/translate" target="_blank">DeepL Translation API</a>
+                    <a href="https://api.voyageai.com/v1/embeddings" target="_blank">Voyage AI Embeddings API</a>
+                    <a href="https://api.openai.com/v1/chat/completions" target="_blank">OpenAI API (Pitch Generation)</a>
+                    
+                    <h4 style="margin-top: 25px;">Project Resources</h4>
+                    <a href="https://business-turku-frontend-final.vercel.app/" target="_blank">Live Application</a>
+                    <a href="https://miro.com/app/board/uXjVJm3yVhg=/" target="_blank">Architecture & Planning (Miro Board)</a>
+                    <a href="https://github.com/tauheedbuttt/business-turku-backend" target="_blank">Backend Repository</a>
+                </div>
+            </section>
+
+            <!-- Key Innovations Section -->
+            <section>
+                <h2>🎯 Key Innovations</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h4>Semantic Matching</h4>
+                        <p>
+                            Unlike traditional keyword-based search, our platform uses vector embeddings to understand the semantic meaning 
+                            of company profiles and investor preferences, resulting in highly relevant matches.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Automated Data Enrichment</h4>
+                        <p>
+                            Automatic translation of Finnish industry codes to English, ensuring international investors can easily 
+                            understand company profiles and enabling cross-border investment opportunities.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>AI-Powered Personalization</h4>
+                        <p>
+                            Each generated pitch is uniquely tailored to the specific investor's thesis, portfolio, and preferences, 
+                            dramatically increasing the relevance and impact of outreach efforts.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>Scalable Architecture</h4>
+                        <p>
+                            Built on modern cloud infrastructure with vector databases capable of handling thousands of companies and 
+                            investors with sub-second query times.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Future Enhancements Section -->
+            <section>
+                <h2>🚀 Future Enhancements</h2>
+                <div class="highlight-box">
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li><strong>MS Dynamics CRM Integration:</strong> Seamless sync with Business Turku's existing CRM system</li>
+                        <li><strong>Advanced Filtering:</strong> Multi-criteria filtering by stage, industry, geography, and check size</li>
+                        <li><strong>Public Funding Programs:</strong> Integration with EU and Finnish public funding databases</li>
+                        <li><strong>Real-Time Updates:</strong> Automatic refresh of company data and investor portfolio changes</li>
+                        <li><strong>Analytics Dashboard:</strong> Track pitch performance, investor engagement, and matching success rates</li>
+                        <li><strong>Multi-Language Support:</strong> Support for Swedish, Finnish, and other European languages</li>
+                        <li><strong>Document Generation:</strong> Export pitches as formatted PDFs or presentation decks</li>
+                        <li><strong>Investor Network Expansion:</strong> Scale to hundreds of European and global investors</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Impact Section -->
+            <section>
+                <h2>💡 Impact & Value</h2>
+                <div class="architecture-section">
+                    <div class="data-flow">
+                        <h4>For Companies</h4>
+                        <ul>
+                            <li>Reduce funding search time from weeks to minutes</li>
+                            <li>Discover investors they wouldn't have found through manual research</li>
+                            <li>Increase pitch quality with AI-generated, investor-specific messaging</li>
+                            <li>Higher success rates in fundraising through better targeting</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="data-flow">
+                        <h4>For Business Turku</h4>
+                        <ul>
+                            <li>Streamline consulting process with automated matching and pitch generation</li>
+                            <li>Scale support to more companies without proportional increase in resources</li>
+                            <li>Data-driven insights into regional funding landscape and investor preferences</li>
+                            <li>Enhanced value proposition for member companies</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="data-flow">
+                        <h4>For Investors</h4>
+                        <ul>
+                            <li>Receive higher quality, more relevant deal flow</li>
+                            <li>Better-prepared pitches that address their specific investment criteria</li>
+                            <li>Increased efficiency in deal sourcing and screening</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <h3 style="margin-bottom: 15px;">Business Turku - AI-Powered Funding & Investment Matching</h3>
+            <p>Developed for Business Turku Hackathon 2025</p>
+            <p style="margin-top: 10px; opacity: 0.8;">Empowering Finnish Companies to Find the Right Funding Partners</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -56,13 +56,9 @@ function processInvestorData(investor) {
 /**
  * Create rich text representation for vectorization (only specified fields)
  * @param {Object} investor - Investor object from JSON
- * @returns {string} Text representation
+ * @returns {string} Text representation with pipe separators
  */
 function createInvestorText(investor) {
-  const name = investor.name || '';
-  const role = investor.role || '';
-  const firm = investor.firm || '';
-  const location = investor.location || '';
   const preferredIndustries = investor.preferred_industries?.join(', ') || '';
   const businessModels = investor.business_models?.join(', ') || '';
   const preferredRounds = investor.preferred_rounds?.join(', ') || '';
@@ -71,7 +67,19 @@ function createInvestorText(investor) {
   const thesis = investor.investment_thesis || '';
   const avoidIndustries = investor.avoid_industries?.join(', ') || '';
   
-  return `Investor: ${name}. Role: ${role}${firm ? ` at ${firm}` : ''}. Location: ${location}. Investment Thesis: ${thesis}. Preferred Industries: ${preferredIndustries}. Business Models: ${businessModels}. Preferred Rounds: ${preferredRounds}. Geographic Focus: ${geoFocus}. Check Size: ${checkSize}. Avoid Industries: ${avoidIndustries}.`;
+  // Build parts array
+  const parts = [];
+  
+  if (preferredIndustries) parts.push(`Preferred Industries: ${preferredIndustries}`);
+  if (businessModels) parts.push(`Business Models: ${businessModels}`);
+  if (preferredRounds) parts.push(`Preferred Rounds: ${preferredRounds}`);
+  if (geoFocus) parts.push(`Geographic Focus: ${geoFocus}`);
+  if (checkSize) parts.push(`Check Size Range: ${checkSize}`);
+  if (thesis) parts.push(`Investment Thesis: ${thesis}`);
+  if (avoidIndustries) parts.push(`Avoid Industries: ${avoidIndustries}`);
+  
+  // Join with pipe separator to create a single string
+  return parts.join(' | ');
 }
 
 /**
@@ -98,7 +106,8 @@ async function vectorizeWithVoyage(texts) {
         'https://api.voyageai.com/v1/embeddings',
         {
           input: batch,
-          model: 'voyage-2'
+          model: 'voyage-3.5',
+          input_type: 'document'
         },
         {
           headers: {

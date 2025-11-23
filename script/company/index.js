@@ -221,8 +221,8 @@ async function fetchCompaniesFromAPI(maxResults = 100) {
       
       const response = await axios.get(PRH_API_URL, {
         params: {
-          page: page,
-          registrationDateStart: '2020-01-01'
+          page: page
+          // No date filter - fetch all companies
         },
         headers: {
           'Accept': 'application/json'
@@ -239,16 +239,13 @@ async function fetchCompaniesFromAPI(maxResults = 100) {
       
       console.log(`  ✅ Page ${page}: Received ${pageData.length} companies`);
       
-      // Filter companies that are registered after 2020 AND have industry classification
+      // Filter companies that have industry classification
       const validCompanies = pageData.filter(company => {
-        const regDate = company.businessId?.registrationDate || company.registrationDate;
         const hasIndustryCode = company.mainBusinessLine?.type;
-        const year = regDate ? new Date(regDate).getFullYear() : 0;
-        
-        return year >= 2020 && hasIndustryCode;
+        return hasIndustryCode; // Only filter by industry code, no date restriction
       });
       
-      console.log(`  ✅ Page ${page}: ${validCompanies.length} companies match criteria (registered >= 2020 with industry code)`);
+      console.log(`  ✅ Page ${page}: ${validCompanies.length} companies match criteria (have industry code)`);
       
       allFetchedCompanies.push(...validCompanies);
       
