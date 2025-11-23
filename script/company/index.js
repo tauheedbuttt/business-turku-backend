@@ -266,9 +266,9 @@ async function fetchCompaniesFromAPI(maxResults = 100) {
       
       page++;
       
-      // Safety limit to prevent infinite loops
-      if (page > 50) {
-        console.log(`  ⚠️  Reached page limit (50 pages)`);
+      // Safety limit to prevent infinite loops - increased for 2000 companies
+      if (page > 200) {
+        console.log(`  ⚠️  Reached page limit (200 pages)`);
         break;
       }
       
@@ -454,6 +454,88 @@ async function vectorizeWithVoyage(texts) {
 }
 
 /**
+ * Store companies in Supabase without embeddings (skip if already exist)
+ * @param {Array} companies - Array of company objects
+ */
+async function storeCompaniesOnly(companies) {
+  console.log(`💾 Storing ${companies.length} companies in Supabase (without embeddings)...`);
+  
+  try {
+    // Step 1: Check which companies already exist (in batches to avoid header overflow)
+    console.log(`  🔍 Checking for existing companies in batches...`);
+    
+    const CHECK_BATCH_SIZE = 100; // Check 100 at a time to avoid header overflow
+    const existingBusinessIds = new Set();
+    
+    for (let i = 0; i < companies.length; i += CHECK_BATCH_SIZE) {
+      const batch = companies.slice(i, i + CHECK_BATCH_SIZE);
+      const businessIds = batch.map(c => c.businessId);
+      
+      const { data: existingCompanies, error: checkError } = await supabase
+        .from('company')
+        .select('business_id')
+        .in('business_id', businessIds);
+
+      if (checkError) {
+        console.error(`❌ Error checking existing companies (batch ${Math.floor(i / CHECK_BATCH_SIZE) + 1}):`, checkError);
+        throw checkError;
+      }
+
+      existingCompanies?.forEach(c => existingBusinessIds.add(c.business_id));
+      
+      if ((i + CHECK_BATCH_SIZE) % 500 === 0 || i + CHECK_BATCH_SIZE >= companies.length) {
+        console.log(`  🔍 Checked ${Math.min(i + CHECK_BATCH_SIZE, companies.length)}/${companies.length} companies...`);
+      }
+    }
+    
+    const newCompanies = companies.filter(c => !existingBusinessIds.has(c.businessId));
+    
+    console.log(`  ✅ Found ${existingBusinessIds.size} existing companies, ${newCompanies.length} new companies to insert`);
+
+    if (newCompanies.length === 0) {
+      console.log(`  ℹ️  All companies already exist in database. Skipping insertion.`);
+      return;
+    }
+
+    // Step 2: Insert only new companies in batches
+    const INSERT_BATCH_SIZE = 100;
+    let totalInserted = 0;
+    
+    for (let i = 0; i < newCompanies.length; i += INSERT_BATCH_SIZE) {
+      const batch = newCompanies.slice(i, i + INSERT_BATCH_SIZE);
+      const companyData = batch.map(company => ({
+        business_id: company.businessId,
+        name: company.name,
+        details: company.details || {}
+      }));
+
+      console.log(`  📦 Inserting batch ${Math.floor(i / INSERT_BATCH_SIZE) + 1} (${batch.length} companies)...`);
+      
+      const { data: insertedCompanies, error: companyError } = await supabase
+        .from('company')
+        .insert(companyData)
+        .select('id, business_id');
+
+      if (companyError) {
+        console.error(`❌ Error inserting companies (batch ${Math.floor(i / INSERT_BATCH_SIZE) + 1}):`, companyError);
+        throw companyError;
+      }
+
+      totalInserted += insertedCompanies?.length || batch.length;
+      
+      if ((i + INSERT_BATCH_SIZE) % 500 === 0 || i + INSERT_BATCH_SIZE >= newCompanies.length) {
+        console.log(`  ✅ Inserted ${totalInserted}/${newCompanies.length} companies so far...`);
+      }
+    }
+
+    console.log(`  ✅ Successfully inserted ${totalInserted} new companies`);
+  } catch (error) {
+    console.error('❌ Error storing companies:', error.message);
+    throw error;
+  }
+}
+
+/**
  * Store companies with vectors in Supabase
  * @param {Array} companies - Array of company objects
  * @param {Array} vectors - Array of corresponding vectors
@@ -540,39 +622,66 @@ async function storeInSupabase(companies, vectors) {
  * Main function to orchestrate the entire process
  */
 async function main() {
-  console.log('🚀 Starting company data pipeline (Direct API Version)...\n');
+  // Check for command line arguments
+  const args = process.argv.slice(2);
+  const withEmbeddings = args.includes('--with-embeddings') || args.includes('-e');
+  const limit = args.find(arg => arg.startsWith('--limit='))?.split('=')[1] || (withEmbeddings ? 100 : 2000);
+  const limitNum = parseInt(limit, 10);
+
+  if (withEmbeddings) {
+    console.log('🚀 Starting company data pipeline WITH EMBEDDINGS...\n');
+    console.log(`📊 Fetching ${limitNum} companies with vectorization enabled\n`);
+  } else {
+    console.log('🚀 Starting company data pipeline (Direct API Version)...\n');
+    console.log(`📊 Fetching ${limitNum} companies (bulk load without embeddings)\n`);
+  }
 
   try {
     // Validate environment variables
-    if (!SUPABASE_URL || !SUPABASE_ANON_KEY || !VOYAGE_API_KEY) {
+    if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
       throw new Error('⚠️  Missing required environment variables. Please check your .env file.');
     }
 
+    if (withEmbeddings && !VOYAGE_API_KEY) {
+      throw new Error('⚠️  Missing VOYAGE_API_KEY required for embeddings. Please check your .env file.');
+    }
+
     // Step 1: Fetch companies from API
-    const companies = await fetchCompaniesFromAPI(500);
+    const companies = await fetchCompaniesFromAPI(limitNum);
     
     if (companies.length === 0) {
       console.log('⚠️  No companies loaded. Exiting...');
       return;
     }
 
-    // Step 2: Create text representations
-    console.log('\n📝 Creating text representations...');
-    const companyTexts = companies.map(createCompanyText);
+    if (withEmbeddings) {
+      // Step 2a: Create company texts for vectorization
+      console.log('\n📝 Creating company texts for vectorization...');
+      const companyTexts = companies.map(createCompanyText);
 
-    // // Step 3: Vectorize with Voyage AI
-    console.log('\n🔄 Vectorizing companies...');
-    const vectors = await vectorizeWithVoyage(companyTexts);
+      // Step 3a: Vectorize with Voyage AI
+      console.log('\n🔮 Vectorizing company data...');
+      const vectors = await vectorizeWithVoyage(companyTexts);
 
-    // // Step 4: Store in Supabase
-    console.log('\n💫 Storing in Supabase...');
-    await storeInSupabase(companies, vectors);
+      // Step 4a: Store companies WITH embeddings
+      console.log('\n💾 Storing companies with embeddings...');
+      await storeInSupabase(companies, vectors);
 
-    console.log('\n✨ Pipeline completed successfully! ✨\n');
-    console.log(`📊 Summary:`);
-    console.log(`   - Companies processed: ${companies.length}`);
-    console.log(`   - Vectors generated: ${vectors.length}`);
-    console.log(`   - Dimension: ${vectors[0]?.length || 'N/A'}`);
+      console.log('\n✨ Pipeline completed successfully! ✨\n');
+      console.log(`📊 Summary:`);
+      console.log(`   - Companies fetched: ${companies.length}`);
+      console.log(`   - Companies vectorized: ${vectors.length}`);
+      console.log(`   - Stored with embeddings`);
+    } else {
+      // Step 2b: Store companies WITHOUT embeddings (skip existing ones)
+      console.log('\n💾 Storing companies...');
+      await storeCompaniesOnly(companies);
+
+      console.log('\n✨ Pipeline completed successfully! ✨\n');
+      console.log(`📊 Summary:`);
+      console.log(`   - Companies fetched: ${companies.length}`);
+      console.log(`   - Stored without embeddings`);
+    }
     
   } catch (error) {
     console.error('\n💥 Pipeline failed:', error.message);
